@@ -20,3 +20,16 @@ Cenário: Buscar por termo e acessar a primeira página
   Quando buscar por 'compasso'
   E acessar a primeira página de resultados
   Então devo visualizar a página da Compasso
+
+@busca_varios_termos_google
+Esquema do Cenário: Buscar por termos no Google
+  Dado que esteja na página inicial do Google
+  Quando buscar por <query>
+  Então resultados devem ser retornados
+  
+  Exemplos:
+  |  query      |
+  | 'batata'    |
+  | 'microsoft' |
+  | 'aws'       |
+  | 'rio grande'|

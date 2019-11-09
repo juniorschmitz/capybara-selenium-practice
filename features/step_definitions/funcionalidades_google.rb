@@ -14,7 +14,6 @@ Quando("buscar por {string}") do |query|
 end
 
 Então("resultados devem ser retornados") do
-  expect(@google_results_page.text).to match(/#{'www.compasso.com.br'}/i)
   expect(@google_results_page).to have_results
 end
 
